@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}TiTanic Dataset Form{% endblock %}
+{% block content %}
+<h1>Titanic Dataset Input Form</h1>
+    <form action="#" method="POST">
+        <!-- Pclass -->
+        <label for="pclass">Passenger Class (Pclass)</label>
+        <input type="number" id="pclass" name="pclass" min="1" max="3" required>
+
+        <!-- Age -->
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" step="1.0" required>
+
+        <!-- Siblings/Spouses -->
+        <label for="sibsp">Number of Siblings/Spouses (SibSp)</label>
+        <input type="number" id="sibsp" name="sibsp" min="0" required>
+
+        <!-- Parents/Children -->
+        <label for="parch">Number of Parents/Children (Parch)</label>
+        <input type="number" id="parch" name="parch" min="0" required>
+
+        <!-- Fare -->
+        <label for="fare">Fare</label>
+        <input type="number" id="fare" name="fare" step="1.0" required>
+
+        <!-- Gender -->
+        <label for="sex_male">Gender</label>
+        <select id="sex_male" name="sex_male" required>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+
+        <!-- Embarked -->
+        <label for="embarked">Port of Embarkation</label>
+        <select id="embarked" name="embarked" required>
+            <option value="Q">Queenstown</option>
+            <option value="S">Southampton</option>
+            <option value="C">Cherbourg</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

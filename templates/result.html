@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}TiTanic Dataset Prediction Result{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Prediction Result</h1>
+    <p>The passenger is predicted to <strong>{{ prediction }}</strong>.</p>
+    <a href="{{ url_for('index') }}">Try Again</a>
+</div>
+{% endblock %}
